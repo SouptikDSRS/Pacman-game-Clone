@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    text-align: center;
+    margin: 0px;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: space-between;
+    width: 150px; /* Center the Left and Right buttons */
+    margin: 10px 0; /* Add some margin for better spacing */
+}
+
+.keypad {
+    margin: 20px 0; 
+    position: relative;/* Add margin to separate the keypad from other elements */
+    top: 54%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the buttons */
+}
+
+.keypad-button {
+    width: 50px;
+    height: 30px;
+    background-color:yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin: 3px; /* Add some margin for spacing between buttons */
+}
+
+.keypad-button:active {
+    background-color: #45a049;
+}
+
+/* Other styles remain the same */
+h1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: larger;
+}
+
+h1 span {
+    font-size: xx-large;
+    display: inline-block;
+    box-shadow: inset 0 0 5px rgba(211, 204, 204, 0.3), 0 0 #ccc;
+    position: relative;
+    animation: colorletter 1.2s infinite;
+    text-align: center;
+   
+}
+
+.score {
+    position: relative;
+    top: 43%;
+    color: white;
+    font-size: larger;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.startbutton {
+    position: relative;
+    top: 20%;
+    color: azure;
+    font-style: oblique;
+    text-align: center;
+}
+
+#startButton {
+    font-size: 20px;
+    background-color: white;
+    color: red;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #666;
+}
+
+/* canvas {
+    position: relative;
+    top: 0px;
+    border: 3px solid;
+    background-color: black;
+    animation: color 2s infinite;
+    max-width: 94%;
+    height: auto; }*/
+canvas {
+    position: absolute; /* Change to absolute to position it more freely */
+    top: 70px; /* Adjust this value to move it up */
+    left: 50%; /* Center the canvas horizontally */
+    transform: translateX(-50%); /*Center correction */
+    border: 3px solid;
+    background-color: black;
+    animation: color 2s infinite;
+    max-width: 94%;
+    height: auto;
+}
+
+@keyframes color {
+    0% {border-color: red;}
+    25% {border-color: gold;}
+    50% {border-color: rgb(201, 180, 25);}
+    75% {border-color: darkmagenta;}
+    100% {border-color: rgb(79, 79, 167);}
+}
+
+#h11 {
+    font-size: xx-large;
+    color: red;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@keyframes colorletter {
+    0% {color: aqua;}
+    25% {color: aliceblue;}
+    50% {color: cadetblue;}
+    75% {color: darksalmon;}
+    100% {color: hotpink;}
+}
+
+#div3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#div3 .button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: wheat;
+    color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}

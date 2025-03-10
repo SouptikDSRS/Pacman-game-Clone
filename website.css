@@ -1,0 +1,158 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(assets2/images2.png);
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header ul li a:hover {
+    background-color: #555;
+}
+
+.container {
+    margin-top: 70px;
+    text-align: center;
+}
+
+h1 span {
+    display: inline-block;
+    box-shadow: inset 0 0 5px rgba(211, 204, 204, 0.3), 0 0 #ccc;
+    position: relative;
+    animation: colorletter 1.2s infinite;
+    font-size: larger;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.score {
+    color: white;  
+    font-size: larger;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.startbutton {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 1000;
+}
+
+#startButton {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: red;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #666;
+}
+
+canvas {
+    border: 3px solid; 
+    background-color: black; 
+    animation: color 2s infinite;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+#h11 {
+    position: relative;
+    top: 50%;
+    font-size: xx-large;
+    color: red;
+    left: 60%;
+}
+
+#div3 {
+    position: relative;
+    left: 90%;
+    background-color: black;
+}
+
+#div3 button {
+    border: none;
+    background-color: wheat;
+}
+
+@keyframes colorletter {
+    0% {transform: translateY(0px); color: aqua;}
+    25% {transform: translateY(-20px); color: aliceblue;}
+    50% {transform: translateY(20px); color: cadetblue;}
+    75% {transform: translateY(0px); color: darksalmon;}
+    100% {transform: translateY(-20px); color: hotpink;}
+}
+
+@keyframes color {
+    0% {border-color: red;}
+    25% {border-color: gold;}
+    50% {border-color: rgb(201, 180, 25);}
+    75% {border-color: darkmagenta;}
+    100% {border-color: rgb(79, 79, 167);}
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .startbutton {
+        bottom: 5%;
+        right: 2%;
+    }
+
+    #startButton {
+        width: 100px;
+        font-size: 18px;
+    }
+
+    #h11 {
+        font-size: large;
+        left: 0; /* Center on smaller screens */
+    }
+
+    #div3 {
+        left: 0; /* Center on smaller screens */
+    }
+}

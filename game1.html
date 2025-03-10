@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<header>
+    <div class="container">
+        <h1><span>P</span><span>A</span><span>C</span><span>M</span><span>A</span><span>N</span></h1>
+    </div>
+    <div id="div3">
+        <a href="index.html" class="button">HOME PAGE</a>
+    </div>
+</header>
+<body>
+    <h1 id="h11" style="color: azure;"></h1>
+    <canvas id="canvas" width="440" height="480"></canvas>
+    <div class="score">
+        <h3 id="scores"></h3>
+    </div>
+
+    <div style="display:none;">
+        <img id="animation" src="assets/animations.gif" width="140" height="20">
+        <img id="ghosts" src="assets/ghost.png" width="140" height="20">
+    </div>
+
+    <div class="startbutton">
+        <button id="startButton">Start</button>
+    </div>
+    
+    <!-- Keypad Controls -->
+    <div class="keypad">
+        <button id="upButton" class="keypad-button">Up</button>
+        <div class="middle-row">
+            <button id="leftButton" class="keypad-button">Left</button>
+            <button id="rightButton" class="keypad-button">Right</button>
+        </div>
+        <button id="downButton" class="keypad-button">Down</button>
+    </div>
+
+    <script src="ghost.js"></script>
+    <script src="pacman.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
